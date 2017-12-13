@@ -1,0 +1,41 @@
+package day3;
+
+import java.util.Scanner;
+
+public class P142 {
+
+	public static void main(String[] args) {
+		//키보드를 통해서 점수를 입력받고  점수가 유효하다면 등급처리
+		int score = 0;
+		char grade = ' ';
+		
+		System.out.println("점수를 입력하세요 입력예시)100 "); 
+		Scanner sc = new Scanner(System.in);
+		score = Integer.parseInt(sc.nextLine());
+		
+		if(!(0<= score && score <=100)){
+			System.out.println("유요하지 않은 score이므로 종료!");
+			return ;
+		}
+		//등급처리
+		System.out.println("이제부터 등급처리 ");
+		
+		if(score >=90){
+			grade = 'A';	
+	    }
+		else if(score >= 80){
+			grade = 'B';
+		}
+		else if(score >= 70){
+			grade = 'C';
+		}
+		else if(score >= 60){
+			grade = 'D';
+		}
+		else {
+			grade = 'F';
+		}
+		
+		System.out.println(score + "의 등급은 " + grade );
+  }
+}
